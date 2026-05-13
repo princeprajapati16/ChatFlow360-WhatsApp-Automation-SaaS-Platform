@@ -1,0 +1,53 @@
+# ──────────────────────────────────────────────────────────────
+# ChatFlow360 – Full Production Requirements
+# ──────────────────────────────────────────────────────────────
+
+# Core Framework
+Django==5.0.4
+djangorestframework==3.15.1
+
+# Authentication
+djangorestframework-simplejwt==5.3.1
+
+# Database
+psycopg2-binary==2.9.9
+
+# Environment / Config
+python-decouple==3.8
+dj-database-url==2.1.0
+
+# CORS
+django-cors-headers==4.3.1
+
+# Filtering / Search
+django-filter==24.2
+
+# Background Workers & Caching
+celery==5.3.6
+redis==5.0.3
+django-celery-beat==2.6.0
+
+# Redis cache backend
+django-redis==5.4.0
+
+# WSGI Server (production)
+gunicorn==22.0.0
+
+# HTTP Client (WhatsApp API calls)
+requests==2.31.0
+
+# Payments
+stripe==9.2.0
+
+# Cryptography & Security
+cryptography==42.0.5
+
+# Images / Avatars
+Pillow==10.3.0
+
+# Utilities
+python-slugify==8.0.4
+
+# Dev / Linting (optional, remove in production image)
+# flake8==7.0.0
+# black==24.3.0
