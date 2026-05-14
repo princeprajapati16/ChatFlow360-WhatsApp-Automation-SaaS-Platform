@@ -16,7 +16,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = config("SECRET_KEY", default="django-insecure-fallback-key-change-in-prod")
 DEBUG = config("DEBUG", default=True, cast=bool)
-ALLOWED_HOSTS = config("ALLOWED_HOSTS", default="localhost,127.0.0.1", cast=Csv())
+ALLOWED_HOSTS = [
+    "localhost",
+    "127.0.0.1",
+    "chat-flow360-whats-app-automation-saa-s-platform-ht35u1rab.vercel.app",
+]
 
 # ─────────────────────────────────────────────
 #  Installed Apps

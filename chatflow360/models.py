@@ -11,7 +11,6 @@ class BaseModel(models.Model):
     """Abstract timestamp mixin used by all local models."""
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-
     class Meta:
         abstract = True
 
