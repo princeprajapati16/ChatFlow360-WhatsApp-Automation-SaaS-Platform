@@ -1,7 +1,7 @@
 # ChatFlow360 – WhatsApp Automation SaaS Platform
 ChatFlow360 is a modern WhatsApp Automation and Customer Engagement SaaS platform designed to help businesses manage conversations, leads, campaigns, and analytics from a single dashboard. The platform provides real-time communication tools, intelligent workflow automation, and centralized customer management for scalable business operations.
 
-#🚀 Features
+# Features
 📩 Real-Time WhatsApp Chat Inbox
 🤖 Automated Messaging & Workflow System
 📊 Advanced Analytics Dashboard
@@ -13,7 +13,7 @@ ChatFlow360 is a modern WhatsApp Automation and Customer Engagement SaaS platfor
 🧠 AI-Assisted Customer Interaction
 🌐 Multi-Organization Workspace Support
 
-🛠️ Technologies Used
+# Technologies Used
 Backend
 Django
 Django REST Framework
