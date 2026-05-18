@@ -33,6 +33,9 @@ django-redis==5.4.0
 # WSGI Server (production)
 gunicorn==22.0.0
 
+# Static files (production)
+whitenoise==6.7.0
+
 # HTTP Client (WhatsApp API calls)
 requests==2.31.0
 

@@ -16,11 +16,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = config("SECRET_KEY", default="django-insecure-fallback-key-change-in-prod")
 DEBUG = config("DEBUG", default=True, cast=bool)
-ALLOWED_HOSTS = [
-    "localhost",
-    "127.0.0.1",
-    ".vercel.app",
-]
+ALLOWED_HOSTS = config(
+    "ALLOWED_HOSTS",
+    default="localhost,127.0.0.1,.railway.app,.up.railway.app,.onrender.com,.vercel.app",
+    cast=Csv()
+)
 
 # ─────────────────────────────────────────────
 #  Installed Apps
@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "whitenoise.runserver_nostatic",
     # Third-party
     "rest_framework",
     "rest_framework_simplejwt",
@@ -64,6 +65,7 @@ INSTALLED_APPS = [
 # ─────────────────────────────────────────────
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "corsheaders.middleware.CorsMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -138,6 +140,7 @@ USE_TZ = True
 # ─────────────────────────────────────────────
 STATIC_URL = "/static/"
 STATIC_ROOT = BASE_DIR / config("STATIC_ROOT", default="staticfiles")
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / config("MEDIA_ROOT", default="media")
