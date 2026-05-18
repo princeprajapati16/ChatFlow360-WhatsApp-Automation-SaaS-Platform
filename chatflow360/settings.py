@@ -19,7 +19,7 @@ DEBUG = config("DEBUG", default=True, cast=bool)
 ALLOWED_HOSTS = [
     "localhost",
     "127.0.0.1",
-    "chat-flow360-whats-app-automation-saa-s-platform-ht35u1rab.vercel.app",
+    ".vercel.app",
 ]
 
 # ─────────────────────────────────────────────
