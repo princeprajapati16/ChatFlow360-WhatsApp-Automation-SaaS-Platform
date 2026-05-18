@@ -15,6 +15,7 @@ import AutomationPage from './pages/AutomationPage'
 import AnalyticsPage from './pages/AnalyticsPage'
 import BillingPage from './pages/BillingPage'
 import SettingsPage from './pages/SettingsPage'
+import DeployPage from './pages/DeployPage'
 
 function RequireAuth({ children }) {
   const token = localStorage.getItem('access_token')
@@ -57,6 +58,7 @@ export default function App() {
           <Route path="/analytics" element={<AnalyticsPage />} />
           <Route path="/billing" element={<BillingPage />} />
           <Route path="/settings" element={<SettingsPage />} />
+          <Route path="/deploy" element={<DeployPage />} />
         </Route>
 
         {/* Fallback */}

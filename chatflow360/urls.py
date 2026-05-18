@@ -8,6 +8,10 @@ from django.conf.urls.static import static
 from django.http import JsonResponse
 
 
+def health_check(request):
+    return JsonResponse({"status": "ok", "service": "ChatFlow360 API"}, status=200)
+
+
 def root_view(request):
     return JsonResponse({
         "status": "success",
@@ -34,6 +38,7 @@ def root_view(request):
 
 urlpatterns = [
     path("", root_view),
+    path("api/health/", health_check),
     path("admin/", admin.site.urls),
 
     # ── Authentication ───────────────────────────────────────
